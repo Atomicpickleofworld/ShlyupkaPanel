@@ -6,7 +6,7 @@ Minimal terminal-inspired UI for running .bat scripts with live logs and clean c
 
 Version: V1.2 Pre-Beta  
 License: BSD 2-Clause  
-Author: Zop7z  
+Author: Zop7z  (https://github.com/Atomicpickleofworld)
 
 ---
 
@@ -79,7 +79,7 @@ You may use, modify, and redistribute it freely — but you must retain the orig
 
 ## 👨‍💻 Credits
 
-Developed by Zop7z  
+Developed by Zop7z  (https://github.com/Atomicpickleofworld)
 Shlyupka is a utility project — fast, portable, and built for daily system tweaking
 
 ---
