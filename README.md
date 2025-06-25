@@ -1,86 +1,88 @@
-# ShlyupkaPanel
-Minimal ".bat" runner for Windows, with live logs and black&amp;green aesthetic
-# 🛶 Shlyupka Panel
+# 🛶 ShlyupkaPanel
 
-Minimal terminal-inspired UI for running .bat scripts with live logs and clean control. Designed for power users, sysadmins, and curious tinkerers who love compact tools that do one thing well.
+Minimal terminal-inspired launcher for `.bat`, `.ps1`, and `.vbs` scripts — with live logs, auto-reporting, and experimental scripting zones.  
+Crafted for power users, sysadmins, and tinkerers who love compact tools that do one thing extremely well.
 
-Version: V1.2 Pre-Beta  
-License: BSD 2-Clause  
-Author: Zop7z or Zap7z (https://github.com/Atomicpickleofworld)
+**Version:** v3.5-Hard-Test (Experimental)  
+**License:** BSD 2-Clause  
+**Author:** Zop7z / Zap7z ([GitHub](https://github.com/Atomicpickleofworld))
 
 ---
 
-## 🚀 Features
+## 🚀 What's New in 3.5
 
-- Run preloaded .bat scripts with a single click
-- Real-time log output in green-on-black style
-- Automatically logs all output to execution_log.txt
-- Simple folder structure — just unpack and run
-- Portable — no installation required
+- **MaxEfficiency.ps1** booster (disables visual effects, applies performance plan)
+- **RevertEfficiency.ps1** (auto-restores settings on reboot)
+- **BAT report generator** (`MaxEfficiency_Report.bat`) displayed in-panel
+- **`DangerScripts/` integration** — experimental scripts appear only in "Risk Mode"
+- **Experimental UI mode** (dark-red warning theme)
+- **Auto-linking system:** any `.bat` added to `commands/` appears in the panel
+
+---
+
+## ✨ Core Features
+
+- Run `.bat`, `.ps1`, `.vbs` files via friendly terminal-style UI  
+- Logs all output to `execution_log.txt` in real time  
+- Automatically detects `.bat` files inside `commands/`  
+- Panel-ready `.bat` templates with support for auto-revert + logging  
+- Fully portable — no installation required
 
 ---
 
 ## ⚠️ Known Issues
 
-- The "Add custom .bat" feature is not implemented yet  
-- The Settings button is currently inactive (planned for V4)  
-- Logs may display garbled symbols unless chcp 65001 is added  
-- Some batch scripts may hang if they include pause, choice, or start
+- Settings and script editor still in progress (planned for V4)  
+- Some batch files with `pause` or `start` may hang the panel window  
+- Logs may display encoding issues — recommended: `chcp 65001 >nul` at start of each `.bat`
 
-> Tip: Always begin your .bat files with chcp 65001 >nul for proper encoding support.
+---
+
+`
+## 📂 Project Structure
+ShlyupkaPanel/
+├── ShlyupkaPanel.exe
+├── commands/         → visible .bat scripts + generated reports
+├── DangerScripts/    → hidden experimental .ps1/.bat files
+├── Upd/              → update notes + development logs
+├── assets/           → icons, visuals, theme config
+`
 
 ---
 
 ## 🧪 Compatibility
 
-Confirmed working on:
+Tested on:
 
-- ✅ Windows 10 Pro (activated)  
-- ✅ Windows 11 Home / Pro (partial testing)
-
-Expected to work on:
-
-- Windows 7 SP1 and newer  
-- Windows Server 2016+  
-- Any version with cmd.exe and powercfg available
-
----
-
-## 📜 License (BSD 2-Clause)
-
-This software is released under the BSD 2-Clause License.  
-You may use, modify, and redistribute it freely — but you must retain the original copyright.
-
-> “As-is” — the author is not liable for any damage, data loss, or electroshock therapy triggered by poor scripting decisions 🤖⚡
+- ✅ Windows 10 / 11  
+- ✅ Windows Server 2019+  
+- Expected to work on Windows 7+ and most cmd-enabled systems
 
 ---
 
 ## 🗺️ Version Roadmap
 
-| Version | Stage      | Goal/Planned Features                                 |
-|---------|------------|--------------------------------------------------------|
-| V1.2    | Pre-Beta   | Public alpha testing, base logging, .bat runner       |
-| V3      | Beta       | Embedded script editor, drag-and-drop support         |
-| V4      | Public     | Settings panel, themes, .bat autoscan                 |
-| V5      | Release 1  | Custom installer, localization, plugin support        |
+| Version  | Stage      | Planned Features                                       |
+|----------|------------|--------------------------------------------------------|
+| v1.2     | Pre-Beta   | Basic logging, single-click `.bat` launcher            |
+| v3.5-HT  | Experimental | MaxEfficiency + DangerScripts mode (Hard-Test branch) |
+| v4       | Public     | Settings UI, Risk confirmation prompt, Themes          |
+| v5       | Release    | Custom installer, localization, plugin support         |
 
 ---
 
 ## 📦 How to Use
 
-1. Clone or download the folder  
-2. Place your .bat files in AppFiles/commands/  
-3. Launch ShlyupkaPanel.exe  
-4. Click any button — logs appear live, saved to execution_log.txt  
-
-> Want a custom icon? Create a shortcut to the app and assign any .ico file you like!
+1. Download or clone this repo  
+2. Place scripts in `/commands/`  
+3. Launch `ShlyupkaPanel.exe`  
+4. Click a button → see output live, saved to `execution_log.txt`
 
 ---
 
 ## 👨‍💻 Credits
 
-Developed by Zop7z or Zap7z (https://github.com/Atomicpickleofworld)
-Shlyupka is a utility project — fast, portable, and built for daily system tweaking
+Created by **Zop7z** aka **Zap7z** ([Atomicpickleofworld](https://github.com/Atomicpickleofworld))  
+_Built for terminal-era coders, batch fans, and curious modifiers_
 
----
-"Crafted by Zop7z or Zap7z, also known as Atomicpickleofworld in the Git seas ⚓"
+> “In case of script disaster — blame the captain, not the vessel.” 🛶⚡
