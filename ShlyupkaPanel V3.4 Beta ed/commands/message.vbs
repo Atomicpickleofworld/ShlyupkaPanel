@@ -1,0 +1,1 @@
+MsgBox "VBScript работает! Сейчас: " & Now(), vbInformation, "ShlyupkaPanel"
